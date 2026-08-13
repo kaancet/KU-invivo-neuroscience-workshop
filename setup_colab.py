@@ -222,13 +222,6 @@ def install_uv() -> None:
 
     installed_version = result.stdout.strip()
 
-    expected_version = f"uv {UV_VERSION}"
-
-    if installed_version != expected_version:
-        raise RuntimeError(
-            f"uv version verification failed.\nExpected: {expected_version}\nFound:    {installed_version}"
-        )
-
     print(f"\nInstalled: {installed_version}")
 
 
